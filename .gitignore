@@ -1,0 +1,14 @@
+
+*.dblite
+
+code/arduino/.pioenvs/do-not-modify-files-here.url
+
+*.elf
+
+*.bin
+
+*.o
+
+*.a
+
+*.hash
