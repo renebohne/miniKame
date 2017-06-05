@@ -1,3 +1,9 @@
+//add to config and use boardmanager: http://arduino.esp8266.com/stable/package_esp8266com_index.json
+//install via library manager: Adafruit MQTT
+//download and install zip (don't use library manager!) https://github.com/adafruit/Adafruit-PWM-Servo-Driver-Library
+
+
+
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
@@ -9,13 +15,13 @@
 
 /************************* WiFi Access Point *********************************/
 
-#define WLAN_SSID       "devolo-000B3BD4045C"
-#define WLAN_PASS       "..."
+#define WLAN_SSID       "galway"
+#define WLAN_PASS       "19781979200419781979200412"
 
 /************************* Adafruit.io Setup *********************************/
 
-//#define AIO_SERVER      "io.adafruit.com"
-#define AIO_SERVER      "192.168.2.126"
+#define AIO_SERVER      "io.adafruit.com"
+//#define AIO_SERVER      "192.168.2.126"
 
 #define AIO_SERVERPORT  1883                   // use 8883 for SSL
 #define AIO_USERNAME    "bohne"
@@ -63,6 +69,8 @@ uint32_t x = 0;
 void setup() {
   Serial.begin(115200);
   Serial.println("minikame");
+
+  pinMode(D7, OUTPUT);//status LED blue
 
   // Connect to WiFi access point.
   Serial.println(); Serial.println();
@@ -130,6 +138,7 @@ void loop() {
 
 void parseData(String data) {
 
+  digitalWrite(D7, HIGH);
   switch (data.toInt()) {
 
     case 1: // Up
@@ -139,6 +148,9 @@ void parseData(String data) {
       break;
 
     case 2: // Down
+    Serial.println("walk 10 steps");
+      robot.walk(10, 550);
+      running = 1;
       break;
 
     case 3: // Left
@@ -193,6 +205,7 @@ void parseData(String data) {
       robot.home();
       break;
   }
+  digitalWrite(D7, LOW);
 }
 
 
