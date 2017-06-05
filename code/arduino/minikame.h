@@ -2,7 +2,7 @@
 #define minikame_h
 
 #include <Servo.h>
-#include <Octosnake.h>
+#include "Octosnake.h"
 
 class MiniKame{
 public:

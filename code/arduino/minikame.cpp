@@ -4,23 +4,23 @@
 void MiniKame::init(){
     // Map between servos and board pins
     board_pins[0] = D1; // Servo S0
-    board_pins[1] = D4; // Servo S1
-    board_pins[2] = D8; // Servo S2
-    board_pins[3] = D6; // Servo S3
-    board_pins[4] = D7; // Servo S4
-    board_pins[5] = D5; // Servo S5
-    board_pins[6] = D2; // Servo S6
-    board_pins[7] = D3; // Servo S7
+    board_pins[1] = D2; // Servo S1
+    board_pins[2] = D3; // Servo S2
+    board_pins[3] = D4; // Servo S3
+    board_pins[4] = D5; // Servo S4
+    board_pins[5] = D6; // Servo S5
+    board_pins[6] = D7; // Servo S6
+    board_pins[7] = D8; // Servo S7
 
     // Trim values for zero position calibration.
     trim[0] = 0;
-    trim[1] = -8;
-    trim[2] = 8;
-    trim[3] = 5;
-    trim[4] = 2;
-    trim[5] = -6;
-    trim[6] = 6;
-    trim[7] = 5;
+    trim[1] = 0;
+    trim[2] = 0;
+    trim[3] = 0;
+    trim[4] = 0;
+    trim[5] = 0;
+    trim[6] = 0;
+    trim[7] = 0;
 
     // Set reverse movement
     for (int i=0; i<8; i++) reverse[i] = false;
