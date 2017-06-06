@@ -16,7 +16,7 @@
 /************************* WiFi Access Point *********************************/
 
 #define WLAN_SSID       "galway"
-#define WLAN_PASS       "19781979200419781979200412"
+#define WLAN_PASS       "..."
 
 /************************* Adafruit.io Setup *********************************/
 

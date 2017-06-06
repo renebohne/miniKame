@@ -16,11 +16,11 @@ void MiniKame::init(){
     //board_pins[7] = D3; // Servo S7
 
     // Trim values for zero position calibration.
-    trim[0] = 14;
+    trim[0] = 0;//14
     trim[1] = 0;
     trim[2] = 0;
     trim[3] = 0;
-    trim[4] = 16;
+    trim[4] = 0;//16
     trim[5] = 0;
     trim[6] = 0;
     trim[7] = 0;
