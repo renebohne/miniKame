@@ -17,11 +17,11 @@ void MiniKame::init(){
 
     // Trim values for zero position calibration.
     trim[0] = 0;//14
-    trim[1] = 0;
+    trim[1] = 4;
     trim[2] = 0;
     trim[3] = 0;
     trim[4] = 0;//16
-    trim[5] = 0;
+    trim[5] = 6;
     trim[6] = 0;
     trim[7] = 0;
 
